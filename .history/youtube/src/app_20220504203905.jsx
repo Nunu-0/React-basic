@@ -17,8 +17,8 @@ function App({youtube}) {
       .then(videos => {
         setVideos(videos);
         setSelectedVideo(null);
-      });
-    },[youtube]);
+      })
+    },[]);
 
   useEffect(()=>{
     youtube.mostPopular()

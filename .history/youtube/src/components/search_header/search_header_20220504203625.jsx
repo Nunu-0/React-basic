@@ -1,5 +1,5 @@
 import styles from './search_header.module.css';
-import React, { memo, useRef } from 'react';
+import React, { useRef } from 'react';
 
 const SearchHeader = memo(({onSearch}) => {
     const inputRef = useRef();

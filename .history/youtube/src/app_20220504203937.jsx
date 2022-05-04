@@ -18,7 +18,7 @@ function App({youtube}) {
         setVideos(videos);
         setSelectedVideo(null);
       });
-    },[youtube]);
+    },[]);
 
   useEffect(()=>{
     youtube.mostPopular()

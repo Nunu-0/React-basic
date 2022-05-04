@@ -1,4 +1,4 @@
-import React, { memo } from 'react';
+import React from 'react';
 import styles from './video_item.module.css'
 
 const VideoItem = memo(
@@ -16,6 +16,6 @@ const VideoItem = memo(
             </div>
         </div>
     </li>
-);});
+)};)
 
 export default VideoItem;
