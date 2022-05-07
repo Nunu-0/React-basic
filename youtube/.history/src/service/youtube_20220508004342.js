@@ -17,8 +17,8 @@ class Youtube {
         params: {
           part: 'snippet',
           maxResults: 25,
+          p: query,
           type: 'video',
-          q: query,
         }
       })
       return response.data.items;

@@ -18,7 +18,7 @@ class Youtube {
           part: 'snippet',
           maxResults: 25,
           type: 'video',
-          q: query,
+          p: query,
         }
       })
       return response.data.items;
