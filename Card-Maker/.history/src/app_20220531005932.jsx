@@ -6,16 +6,18 @@ import Maker from './components/maker/maker';
 
 function App({ authService }) {
   return (
+    <BrowserRouter>
+      <Routes>
     <div className={styles.app}>
-      <BrowserRouter>
-        <Routes>
-          <Route exact path="/"
-          element={<Login authService={authService} />}/>
-          <Route path="/maker"
-          element={<Maker authService={authService}/>}/>
-        </Routes>
-      </BrowserRouter>
+        <Route exact path="/">
+          <Login authService={authService} />
+        </Route>
+        <Route path="/maker">
+          <Maker/>
+        </Route>
     </div>
+      </Routes>
+      </BrowserRouter>
   );
 }
 
