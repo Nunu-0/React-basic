@@ -50,25 +50,26 @@ const Maker = ({authService}) => {
         })
     });
 
-    const createOrUpdateCard = (card) =>{
+    const addCard = (card) =>{
+        const updated = [...cards, card];
+        setCards(updated);
+    }
+    const updateCard = (card) =>{
         setCards(cards =>{
             const updated = {...cards};
             updated[card.id] = card;
-            return updated;
+            return
         });
     }
     const deleteCard = (card) =>{
-        setCards(cards =>{
-            const updated = {...cards};
-            delete updated[card.id];
-            return updated;
-        });
+        const updated = [...cards, card];
+        setCards(updated);
     }
     return(
         <section className={styles.maker}>
             <Header onLogout={onLogout}/>
             <div className={styles.container}>
-                <Editor cards={cards} createOrUpdateCard={createOrUpdateCard} deleteCard={deleteCard}/>
+                <Editor cards={cards} addCard={addCard} updateCard={updateCard} deleteCard={deleteCard}/>
                 <Preview cards={cards}/>
             </div>
             <Footer/>

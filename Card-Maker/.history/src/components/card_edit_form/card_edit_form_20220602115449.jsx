@@ -24,7 +24,7 @@ const CardEditForm = ({card, createOrUpdateCard, deleteCard}) => {
         });
     }
     const onSubmit = () =>{
-        deleteCard(card);
+
     };
     return(
         <form className={styles.form}>

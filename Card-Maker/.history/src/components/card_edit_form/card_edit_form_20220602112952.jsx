@@ -3,7 +3,7 @@ import Button from '../button/button';
 import ImageFileInput from '../image_file_input/image_file_input';
 import styles from './card_edit_form.module.css';
 
-const CardEditForm = ({card, createOrUpdateCard, deleteCard}) => {
+const CardEditForm = ({card, updateCard, deleteCard}) => {
     const nameRef = useRef();
     const companyRef = useRef();
     const themeRef = useRef();
@@ -18,19 +18,19 @@ const CardEditForm = ({card, createOrUpdateCard, deleteCard}) => {
             return;
         }
         event.preventDefault();
-        createOrUpdateCard({
+        updateCard({
             ...card,
             [event.currentTarget.name]:event.currentTarget.value,
         });
     }
     const onSubmit = () =>{
-        deleteCard(card);
+
     };
     return(
         <form className={styles.form}>
             <input ref={nameRef} className={styles.input} type="text" name='name' placeholder={name} onChange={onChange}/>
             <input ref={companyRef} className={styles.input} type="text" name='company' placeholder={company} onChange={onChange}/>
-            <select ref={themeRef} className={styles.select} name="theme" value={theme} onChange={onChange}>
+            <select ref={themeRef} className={styles.select} name="theme" placeholder={theme} onChange={onChange}>
                 <option placeholder="light">light</option>
                 <option placeholder="dark">dark</option>
                 <option placeholder="colorful">colorful</option>

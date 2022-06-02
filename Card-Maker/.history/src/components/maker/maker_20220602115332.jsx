@@ -58,11 +58,8 @@ const Maker = ({authService}) => {
         });
     }
     const deleteCard = (card) =>{
-        setCards(cards =>{
-            const updated = {...cards};
-            delete updated[card.id];
-            return updated;
-        });
+        const updated = [...cards, card];
+        setCards(updated);
     }
     return(
         <section className={styles.maker}>

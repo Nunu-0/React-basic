@@ -18,13 +18,13 @@ const CardEditForm = ({card, createOrUpdateCard, deleteCard}) => {
             return;
         }
         event.preventDefault();
-        createOrUpdateCard({
+        updateCard({
             ...card,
             [event.currentTarget.name]:event.currentTarget.value,
         });
     }
     const onSubmit = () =>{
-        deleteCard(card);
+
     };
     return(
         <form className={styles.form}>

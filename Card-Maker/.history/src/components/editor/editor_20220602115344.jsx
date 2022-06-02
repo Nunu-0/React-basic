@@ -8,9 +8,9 @@ const Editor = ({cards, createOrUpdateCard, deleteCard}) => (
         <section className={styles.editor}>
             <h1 className={styles.title}>Card Maker</h1>    
             {Object.keys(cards).map(key =>(
-                <CardEditForm key={key} card={cards[key]} createOrUpdateCard={createOrUpdateCard} deleteCard={deleteCard}/>
+                <CardEditForm key={key} card={cards[key]} updateCard={updateCard} deleteCard={deleteCard}/>
             ))}
-            <CardAddForm onAdd={createOrUpdateCard}/>
+            <CardAddForm onAdd={addCard}/>
         </section>
     );
 

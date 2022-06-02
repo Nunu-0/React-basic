@@ -16,24 +16,6 @@ const Maker = ({authService}) => {
             email: 'lyu2015@gmail.com',
             message: 'go for it',
             fileName: 'yw',
-        },
-        '2':{
-            id: '2',
-            name: 'yw',
-            company: 'sangmyung',
-            theme: 'dark',
-            email: 'lyu2015@gmail.com',
-            message: 'go for it',
-            fileName: 'yw',
-        },
-        '3':{
-            id: '3',
-            name: 'yw',
-            company: 'sangmyung',
-            theme: 'colorful',
-            email: 'lyu2015@gmail.com',
-            message: 'go for it',
-            fileName: 'yw',
         } 
     });
     const navigate = useNavigate();
@@ -50,25 +32,26 @@ const Maker = ({authService}) => {
         })
     });
 
-    const createOrUpdateCard = (card) =>{
-        setCards(cards =>{
-            const updated = {...cards};
-            updated[card.id] = card;
-            return updated;
-        });
+    const addCard = (card) =>{
+        const updated = [...cards, card];
+        setCards(updated);
+    }
+    const updateCard = (card) =>{
+        const updated = cards.map(item =>{
+            if(card.id === item.id){
+                return m
+            }
+        })
     }
     const deleteCard = (card) =>{
-        setCards(cards =>{
-            const updated = {...cards};
-            delete updated[card.id];
-            return updated;
-        });
+        const updated = [...cards, card];
+        setCards(updated);
     }
     return(
         <section className={styles.maker}>
             <Header onLogout={onLogout}/>
             <div className={styles.container}>
-                <Editor cards={cards} createOrUpdateCard={createOrUpdateCard} deleteCard={deleteCard}/>
+                <Editor cards={cards} addCard={addCard} updateCard={updateCard} deleteCard={deleteCard}/>
                 <Preview cards={cards}/>
             </div>
             <Footer/>
