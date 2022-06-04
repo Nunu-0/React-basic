@@ -8,11 +8,13 @@ function App({ FileInput, authService }) {
   return (
     <div className={styles.app}>
       <BrowserRouter>
-      <Routes>
-          <Route exact path="/"
-          element={<Login authService={authService} />}/>
-          <Route path="/maker"
-          element={<Maker authService={authService} FileInput={FileInput}/>}/>
+        <Routes>
+          <Route exact path="/">
+            <Login authService={authService} />
+          </Route>
+          <Route path="/maker">
+            <Maker FileInput={FileInput} authService={authService} />
+          </Route>
         </Routes>
       </BrowserRouter>
     </div>

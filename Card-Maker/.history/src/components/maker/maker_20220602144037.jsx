@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useHistory, useNavigate } from 'react-router-dom';
 import Footer from '../footer/footer';
 import Header from '../header/header';
 import Editor from '../editor/editor';
@@ -8,37 +8,37 @@ import styles from './maker.module.css';
 
 const Maker = ({ FileInput, authService }) => {
   const [cards, setCards] = useState({
-		1: {
+    1: {
       id: '1',
-      name: 'YW1',
-      company: 'SANGMYUNG',
-      theme: 'light',
+      name: 'Ellie',
+      company: 'Samsung',
+      theme: 'dark',
       title: 'Software Engineer',
-      email: 'lyu2015@gmail.com',
+      email: 'ellie@gmail.com',
       message: 'go for it',
-      fileName: 'yw',
+      fileName: 'ellie',
       fileURL: null,
     },
     2: {
       id: '2',
-      name: 'YW2',
-      company: 'SANGMYUNG',
-      theme: 'dark',
+      name: 'Ellie2',
+      company: 'Samsung',
+      theme: 'light',
       title: 'Software Engineer',
-      email: 'lyu2015@gmail.com',
+      email: 'ellie@gmail.com',
       message: 'go for it',
-      fileName: 'yw',
-      fileURL: null,
+      fileName: 'ellie',
+      fileURL: 'ellie.png',
     },
     3: {
       id: '3',
-      name: 'YW3',
-      company: 'SANGMYUNG',
+      name: 'Ellie3',
+      company: 'Samsung',
       theme: 'colorful',
       title: 'Software Engineer',
-      email: 'lyu2015@gmail.com',
+      email: 'ellie@gmail.com',
       message: 'go for it',
-      fileName: 'yw',
+      fileName: 'ellie',
       fileURL: null,
     },
   });
