@@ -12,7 +12,7 @@ const Maker = ({ FileInput, authService, cardRepository }) => {
   const [userId, setUserId] = useState(navigateState && navigateState.id);
   
   const navigate = useNavigate();
-  const onLogout = useCallback(() => {
+  const onLogout = useCallback() => {
     authService.logout();
   }, [authService]);
 

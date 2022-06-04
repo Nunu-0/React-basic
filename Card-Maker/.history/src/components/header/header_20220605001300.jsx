@@ -3,7 +3,6 @@ import styles from './header.module.css';
 
 const Header = memo(({onLogout}) => (
     <header className={styles.header}>
-        {console.log("header")}
         {onLogout && (
             <button className={styles.logout} onClick={onLogout}>Logout</button>)}
         <img className={styles.logo} src="/images/logo.png" alt="logo" />

@@ -1,4 +1,4 @@
-import React, { memo, useRef, useState } from 'react';
+import React, { useRef, useState } from 'react';
 import styles from './image_file_input.module.css';
 
 const ImageFileInput = memo(({ imageUploader, name, onFileChange }) => {
