@@ -33,7 +33,7 @@ const Maker = ({ FileInput, authService, cardRepository }) => {
         navigate('/');
       }
     });
-  },[userId, navigate, authService]);
+  },[userId, authService]);
 
   const createOrUpdateCard = card => {
     setCards(cards => {

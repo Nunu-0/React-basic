@@ -18,9 +18,9 @@ class AuthService{
 
     getProvider(providerName){
         switch(providerName){
-            case 'Google':
+            case 'google':
                 return googleProvider;
-            case 'Github':
+            case 'github':
                 return githubProvider;
             default:
                 throw new Error('not supported provider: ${providerName}');
