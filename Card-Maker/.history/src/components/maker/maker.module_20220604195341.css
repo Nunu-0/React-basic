@@ -6,6 +6,7 @@
     height: 100%;
     max-width: 80rem;
     display: flex;
+    overflow-y: scroll;
     flex-direction: column;
     background-color: makerWhite;
 }
@@ -13,7 +14,6 @@
 .container{
     display: flex;
     flex: 1;
-    min-height: 0;
 }
 
 @media screen and (max-width: mediaQuery){
